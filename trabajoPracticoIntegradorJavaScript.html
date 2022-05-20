@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Trabajo Práctico Integrador con JavaScript</title>
+</head>
+
+<body>
+    <header class="container-fluid p-0">
+        <nav class="navbar navbar-expand-sm navbar-dark p-3" style="background-color: #353a40;">
+            <div class="container">
+                <a class="navbar-brand" href="file:///C:/Users/Marcelo/Documents/Libros/C%C3%B3mo%20estudiar%20un%20idioma/Codo%20a%20Codo/Trabajo%20Pr%C3%A1ctico%20Integrador%20-%20Terminado/html/TrabajoPracticoIntegrador.html"> Conf Bs As</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="#">La conferencia</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Los oradores</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">El lugar y la fecha</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="#">Conviértete en orador</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="#" style="color: #29a744">Comprar tickets</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <ul class="list-group list-group-horizontal list-group-item-center justify-content-center p-3">
+            <li class="list-group-item border border-2 border-primary m-1 p-4 rounded-0 text-center">
+                <h5>Estudiante</h5>
+                <p>Tienen un descuento</p>
+                <h5><b>80%</b></h5>
+                <p><small class="text-muted">* presentar documentación</small></p>
+            </li>
+            <li class="list-group-item border border-2 border-primary m-1 p-4 rounded-0 text-center">
+                <h5>Trainee</h5>
+                <p>Tienen un descuento</p>
+                <h5><b>50%</b></h5>
+                <p><small class="text-muted">* presentar documentación</small></p>
+            </li>
+            <li class="list-group-item border border-2 border-warning m-1 p-4 rounded-0 text-center">
+                <h5>Junior</h5>
+                <p>Tienen un descuento</p>
+                <h5><b>15%</b></h5>
+                <p><small class="text-muted">* presentar documentación</small></p>
+            </li>
+        </ul>
+
+        <h5 class="pt-1 text-center text-secondary"><small style="font-size: 0.8em;">VENTA</small></h5>
+        <h3 class="text-center">VALOR DEL TICKET $200</h3>
+
+        <span class="container-fluid">
+            <form>
+                <div class="row d-flex justify-content-center">
+                    <div class="form-group col-lg-4 mb-3">
+                        <input type="text" class="form-control" placeholder="Nombre" name="nombre">
+                    </div>
+                    <div class="form-group col-lg-4 mb-3">
+                        <input type="text" class="form-control" placeholder="Apellido" name="apellido">
+                    </div>
+                    <div class="form-group col-lg-8 mb-3">
+                        <input type="correo" class="form-control" placeholder="Correo" name="correo">
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="form-group col-lg-4 mb-3">
+                        <label for="Cantidad" class="label mb-3">Cantidad</label>
+                        <input type="text" class="form-control" placeholder="Cantidad" name="cantidad" id="cantidad">
+                    </div>
+                    <div class="form-group col-lg-4 mb-3">
+                        <label for="Categoria" class="label mb-3">Categoría</label>
+                        <select class="form-control form-label form-select" name="categoria" id="categoria">
+                            <option value="80">Estudiante</option>
+                            <option value="50">Trainee</option>
+                            <option value="15">Junior</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="form-group col-lg-8 mb-3">
+                        <input type="text" class="alert alert-primary" style="width: 100%;" value="Total a Pagar: $" id="total" role="alert" readonly>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center">
+                    <div class="form-group col-lg-4">
+                        <button class="btn text-light form-control" type="reset" style="background-color: #96c93e;">Borrar</button>
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <button class="btn text-light form-control" type="button" style="background-color: #96c93e;" onclick="totalPrecio()">Resumen</button>
+                    </div>
+                </div>
+            </form>
+        </span>
+    </main>
+
+    <footer>
+        <div>
+            <ul class="nav justify-content-center p-3" style="background: linear-gradient(to right, #1a323f, #1c4d69);">
+                <li class="nav-item my-auto px-0 px-xl-4"><a class="nav-link" href="#" style="color: whitesmoke;">Preguntas<br>frecuentes</a></li>
+                <li class="nav-item my-auto px-0 px-xl-4"><a class="nav-link" href="#" style="color: whitesmoke;">Contáctanos</a></li>
+                <li class="nav-item my-auto px-0 px-xl-4"><a class="nav-link" href="#" style="color: whitesmoke;">Prensa</a></li>
+                <li class="nav-item my-auto px-0 px-xl-4"><a class="nav-link" href="#" style="color: whitesmoke;">Conferencias</a></li>
+                <li class="nav-item my-auto px-0 px-xl-4"><a class="nav-link" href="#" style="color: whitesmoke;">Términos y<br>Condiciones</a></li>
+                <li class="nav-item my-auto px-0 px-xl-4"><a class="nav-link" href="#" style="color: whitesmoke;">Privacidad</a></li>
+                <li class="nav-item my-auto px-0 px-xl-4"><a class="nav-link" href="#" style="color: whitesmoke;">Estudiantes</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+
+        const precioTicket = 200;
+
+        function totalPrecio(){
+	        var cantidadTicket = document.getElementById('cantidad').value;
+	        var descuento = document.getElementById('categoria').value;
+	
+	        var precio = cantidadTicket * (precioTicket - ((precioTicket * descuento) / 100));
+	
+	        document.getElementById('total').value = "Total a Pagar: $" + precio;
+        }
+        
+    </script>
+</body>
+</html>
